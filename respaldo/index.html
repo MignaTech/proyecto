@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>biblio</title>
+</head>
+<body>
+	<div id="wrapper">
+		<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Admin">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Mi Biblioteca</div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="/Admin">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Gestion
+            </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-list"></i>
+                    <span>Prestamos</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/Prestamo/Registrar">Regitrar</a>
+                        <a class="collapse-item" href="/Prestamo/Consultar">Consultar</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Utilities Collapse Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                            <i class="fas fa-book"></i>
+                            <span>Biblioteca</span>
+                        </a>
+                        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Registrar:</h6>
+                                <a class="collapse-item" href="/Biblioteca/Libros">Libros</a>
+                                <a class="collapse-item" href="/Biblioteca/Autores">Autores</a>
+                                <a class="collapse-item" href="/Biblioteca/Editorial">Editorial</a>
+                                <a class="collapse-item" href="/Biblioteca/Categoria">Categoria</a>
+                            </div>
+                        </div>
+                    </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Personas</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Registrar:</h6>
+                                <a class="collapse-item" href="/Persona/Usuarios">Usuarios</a>
+
+                        <a class="collapse-item" href="/Persona/Lectores">Lectores</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://ouo.io/VRgLgZ" target="_blank">
+                    <i class="fas fa-donate"></i>
+                    <span>Ver Premium =)</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+        	<div id="content">
+        		<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- Topbar Search -->
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search" abineguid="01787E2EC9344BB383470BA92F7890FB">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Naomi Konoe</span>
+                                <i class="fas fa-user-shield" style="font-size:25px;font-weight:bold"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="/Admin/CerrarSesion">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Salir
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div id="container-fluid">
+                	<!-- CONTENDIDO -->
+                </div>
+
+        	</div>
+        	<!-- PIE DE PAGINA -->
+        	<footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+	</div>
+	<!-- BOTON VOLVER ARRIBA -->
+	<a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
+        <i class="fas fa-angle-up"></i>
+    </a>
+</body>
+</html>
+
+
+<!-- LIBROS -->
+<div class="container-fluid">
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+	    <div class="card-header py-3 bg-primary">
+	        <h6 class="m-0 font-weight-bold text-white">Lista de libros</h6>
+	    </div>
+	    <div class="card-body">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <button class="btn btn-success btn-sm" type="button" onclick="abrirModal(null)">Crear Nuevo</button>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-sm-12">
+
+	                <div class="table-responsive">
+	                    <div id="tabla_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="tabla_length"><label>Mostrar <select name="tabla_length" aria-controls="tabla" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div></div><div class="col-sm-12 col-md-6"><div id="tabla_filter" class="dataTables_filter"><label>Buscar:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tabla"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="tabla" style="width: 100%;" cellspacing="0" role="grid" aria-describedby="tabla_info">
+	                        <thead>
+	                            <tr role="row"><th class="sorting sorting_asc" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" aria-label="Titulo: Activar para ordenar la columna de manera descendente" aria-sort="ascending" style="width: 64px;">Titulo</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 63px;" aria-label="Autor: Activar para ordenar la columna de manera ascendente">Autor</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 97px;" aria-label="Categoria: Activar para ordenar la columna de manera ascendente">Categoria</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 85px;" aria-label="Editorial: Activar para ordenar la columna de manera ascendente">Editorial</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 99px;" aria-label="Ubicacion: Activar para ordenar la columna de manera ascendente">Ubicacion</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 107px;" aria-label="Ejemplares: Activar para ordenar la columna de manera ascendente">Ejemplares</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 71px;" aria-label="Estado: Activar para ordenar la columna de manera ascendente">Estado</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 90px;" aria-label=""></th></tr>
+	                        </thead>
+	                        <tfoot>
+	                            <tr><th rowspan="1" colspan="1">Titulo</th><th rowspan="1" colspan="1">Autor</th><th rowspan="1" colspan="1">Categoria</th><th rowspan="1" colspan="1">Editorial</th><th rowspan="1" colspan="1">Ubicacion</th><th rowspan="1" colspan="1">Ejemplares</th><th rowspan="1" colspan="1">Estado</th><th rowspan="1" colspan="1"></th></tr>
+	                        </tfoot>
+	                        <tbody><tr class="odd"><td valign="top" colspan="8" class="dataTables_empty">Ningún dato disponible en esta tabla</td></tr></tbody>
+	                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="tabla_info" role="status" aria-live="polite">Mostrando registros del 0 al 0 de un total de 0 registros</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="tabla_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="tabla_previous"><a href="#" aria-controls="tabla" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item next disabled" id="tabla_next"><a href="#" aria-controls="tabla" data-dt-idx="1" tabindex="0" class="page-link">Siguiente</a></li></ul></div></div></div></div>
+	                </div>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="FormModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	    <div class="modal-dialog modal-lg" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header bg-primary text-white">
+	                <h5 class="modal-title" id="exampleModalLabel">Libro</h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">×</span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+	                <input id="txtid" type="hidden" value="0">
+	                <form id="formNivel" abineguid="024D6CE0A37A42E88EEC90671DACD163">
+	                    <div class="row">
+	                        <div class="col-sm-6">
+	                            <div class="form-group">
+	                                <img id="imglibro" height="192" width="190" class="border border-dark">
+	                            </div>
+	                            <div class="form-group">
+	                                <input class="form-control-file" type="file" id="filelibro" onchange="readURL(this);">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-6">
+	                            <div class="form-group">
+	                                <label for="txttitulo">Titulo</label>
+	                                <input type="text" class="form-control required" id="txttitulo" name="descripcion" autocomplete="off">
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="cboautor">Autor</label>
+	                                <select id="cboautor" class="form-control"></select>
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="cbocategoria">Categoria</label>
+	                                <select id="cbocategoria" class="form-control"></select>
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                    <div class="row">
+	                        <div class="col-sm-6">
+	                            <div class="form-group">
+	                                <label for="cboeditorial">Editorial</label>
+	                                <select id="cboeditorial" class="form-control"></select>
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-6">
+	                            <div class="form-group">
+	                                <label for="txtubicacion">Ubicacion</label>
+	                                <input type="text" class="form-control required" id="txtubicacion" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                    <div class="row">
+	                        <div class="col-sm-6">
+	                            <div class="form-group">
+	                                <label for="txtejemplares">Ejemplares</label>
+	                                <input type="text" class="form-control required" id="txtejemplares" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                        <div class="col-sm-6">
+	                            <div class="form-group">
+	                                <label for="cboEstado">Estado:</label>
+	                                <select id="cboEstado" class="form-control">
+	                                    <option value="1">Activo</option>
+	                                    <option value="0">No Activo</option>
+	                                </select>
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                </form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+	                <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<!-- ACTORES -->
+<div class="container-fluid">
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+	    <div class="card-header py-3 bg-primary">
+	        <h6 class="m-0 font-weight-bold text-white">Lista de Autores</h6>
+	    </div>
+	    <div class="card-body">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <button class="btn btn-success btn-sm" type="button" onclick="abrirModal(null)">Crear Nuevo</button>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="table-responsive">
+	                    <div id="tabla_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="tabla_length"><label>Mostrar <select name="tabla_length" aria-controls="tabla" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div></div><div class="col-sm-12 col-md-6"><div id="tabla_filter" class="dataTables_filter"><label>Buscar:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tabla"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="tabla" style="width: 100%;" cellspacing="0" role="grid" aria-describedby="tabla_info">
+	                        <thead>
+	                            <tr role="row"><th class="sorting sorting_asc" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" aria-label="Nombre: Activar para ordenar la columna de manera descendente" aria-sort="ascending" style="width: 425px;">Nombre</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 375px;" aria-label="Estado: Activar para ordenar la columna de manera ascendente">Estado</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 90px;" aria-label=""></th></tr>
+	                        </thead>
+	                        <tfoot>
+	                            <tr><th rowspan="1" colspan="1">Nombre</th><th rowspan="1" colspan="1">Estado</th><th rowspan="1" colspan="1"></th></tr>
+	                        </tfoot>
+	                        <tbody><tr class="odd"><td valign="top" colspan="3" class="dataTables_empty">Ningún dato disponible en esta tabla</td></tr></tbody>
+	                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="tabla_info" role="status" aria-live="polite">Mostrando registros del 0 al 0 de un total de 0 registros</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="tabla_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="tabla_previous"><a href="#" aria-controls="tabla" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item next disabled" id="tabla_next"><a href="#" aria-controls="tabla" data-dt-idx="1" tabindex="0" class="page-link">Siguiente</a></li></ul></div></div></div></div>
+	                </div>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="FormModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header bg-primary text-white">
+	                <h5 class="modal-title" id="exampleModalLabel">Autor</h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">×</span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+	                <input id="txtid" type="hidden" value="0">
+	                <form id="formNivel" abineguid="CF664D993113443A8CB3FD53AC348247">
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="txtdescripcion">Nombre:</label>
+	                                <input type="text" class="form-control required" id="txtdescripcion" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="cboEstado">Estado:</label>
+	                                <select id="cboEstado" class="form-control">
+	                                    <option value="1">Activo</option>
+	                                    <option value="0">No Activo</option>
+	                                </select>
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                </form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+	                <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<!-- EDITORIAL -->
+<div class="container-fluid">
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+	    <div class="card-header py-3 bg-primary">
+	        <h6 class="m-0 font-weight-bold text-white">Lista de Editorial</h6>
+	    </div>
+	    <div class="card-body">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <button class="btn btn-success btn-sm" type="button" onclick="abrirModal(null)">Crear Nuevo</button>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="table-responsive">
+	                    <div id="tabla_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="tabla_length"><label>Mostrar <select name="tabla_length" aria-controls="tabla" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div></div><div class="col-sm-12 col-md-6"><div id="tabla_filter" class="dataTables_filter"><label>Buscar:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tabla"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="tabla" style="width: 100%;" cellspacing="0" role="grid" aria-describedby="tabla_info">
+	                        <thead>
+	                            <tr role="row"><th class="sorting sorting_asc" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" aria-label="Descricion: Activar para ordenar la columna de manera descendente" aria-sort="ascending" style="width: 454px;">Descricion</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 346px;" aria-label="Estado: Activar para ordenar la columna de manera ascendente">Estado</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 90px;" aria-label=""></th></tr>
+	                        </thead>
+	                        <tfoot>
+	                            <tr><th rowspan="1" colspan="1">Descricion</th><th rowspan="1" colspan="1">Estado</th><th rowspan="1" colspan="1"></th></tr>
+	                        </tfoot>
+	                        <tbody><tr class="odd"><td valign="top" colspan="3" class="dataTables_empty">Ningún dato disponible en esta tabla</td></tr></tbody>
+	                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="tabla_info" role="status" aria-live="polite">Mostrando registros del 0 al 0 de un total de 0 registros</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="tabla_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="tabla_previous"><a href="#" aria-controls="tabla" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item next disabled" id="tabla_next"><a href="#" aria-controls="tabla" data-dt-idx="1" tabindex="0" class="page-link">Siguiente</a></li></ul></div></div></div></div>
+	                </div>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="FormModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header bg-primary text-white">
+	                <h5 class="modal-title" id="exampleModalLabel">Editorial</h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">×</span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+	                <input id="txtid" type="hidden" value="0">
+	                <form id="formNivel" abineguid="5B127B82A0AD4E18BEE1DD4A511EDC67">
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="txtdescripcion">Descripcion:</label>
+	                                <input type="text" class="form-control required" id="txtdescripcion" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="cboEstado">Estado:</label>
+	                                <select id="cboEstado" class="form-control">
+	                                    <option value="1">Activo</option>
+	                                    <option value="0">No Activo</option>
+	                                </select>
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                </form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+	                <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+<!-- CATEGORIAL -->
+<div class="container-fluid">
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+	    <div class="card-header py-3 bg-primary">
+	        <h6 class="m-0 font-weight-bold text-white">Lista de Categorias</h6>
+	    </div>
+	    <div class="card-body">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <button class="btn btn-success btn-sm" type="button" onclick="abrirModal(null)">Crear Nuevo</button>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="table-responsive">
+	                    <div id="tabla_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="tabla_length"><label>Mostrar <select name="tabla_length" aria-controls="tabla" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div></div><div class="col-sm-12 col-md-6"><div id="tabla_filter" class="dataTables_filter"><label>Buscar:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tabla"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="tabla" style="width: 100%;" cellspacing="0" role="grid" aria-describedby="tabla_info">
+	                        <thead>
+	                            <tr role="row"><th class="sorting sorting_asc" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" aria-label="Descricion: Activar para ordenar la columna de manera descendente" aria-sort="ascending" style="width: 454px;">Descricion</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 346px;" aria-label="Estado: Activar para ordenar la columna de manera ascendente">Estado</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 90px;" aria-label=""></th></tr>
+	                        </thead>
+	                        <tfoot>
+	                            <tr><th rowspan="1" colspan="1">Descricion</th><th rowspan="1" colspan="1">Estado</th><th rowspan="1" colspan="1"></th></tr>
+	                        </tfoot>
+	                        <tbody>
+	                        <tr class="odd"><td valign="top" colspan="3" class="dataTables_empty">Ningún dato disponible en esta tabla</td></tr></tbody>
+	                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="tabla_info" role="status" aria-live="polite">Mostrando registros del 0 al 0 de un total de 0 registros</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="tabla_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="tabla_previous"><a href="#" aria-controls="tabla" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item next disabled" id="tabla_next"><a href="#" aria-controls="tabla" data-dt-idx="1" tabindex="0" class="page-link">Siguiente</a></li></ul></div></div></div></div>
+	                </div>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="FormModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header bg-primary text-white">
+	                <h5 class="modal-title" id="exampleModalLabel">Categoria</h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">×</span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+	                <input id="txtid" type="hidden" value="0">
+	                <form id="formNivel" abineguid="4DD2BF69C6704C30B0F060FD62809C44">
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="txtdescripcion">Descripcion:</label>
+	                                <input type="text" class="form-control required" id="txtdescripcion" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+	                   
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="cboEstado">Estado:</label>
+	                                <select id="cboEstado" class="form-control">
+	                                    <option value="1">Activo</option>
+	                                    <option value="0">No Activo</option>
+	                                </select>
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                </form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+	                <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<!-- USUARIOS -->
+<div class="container-fluid">
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+	    <div class="card-header py-3 bg-primary">
+	        <h6 class="m-0 font-weight-bold text-white">Lista de Usuarios</h6>
+	    </div>
+	    <div class="card-body">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <button class="btn btn-success btn-sm" type="button" onclick="abrirModal(null)">Crear Nuevo</button>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="table-responsive">
+	                    <div id="tabla_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="tabla_length"><label>Mostrar <select name="tabla_length" aria-controls="tabla" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> registros</label></div></div><div class="col-sm-12 col-md-6"><div id="tabla_filter" class="dataTables_filter"><label>Buscar:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tabla"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="tabla" style="width: 100%;" cellspacing="0" role="grid" aria-describedby="tabla_info">
+	                        <thead>
+	                            <tr role="row"><th class="sorting sorting_asc" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" aria-label="Nombre: Activar para ordenar la columna de manera descendente" aria-sort="ascending" style="width: 122px;">Nombre</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 168px;" aria-label="Apellido: Activar para ordenar la columna de manera ascendente">Apellido</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 191px;" aria-label="Correo: Activar para ordenar la columna de manera ascendente">Correo</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 111px;" aria-label="Tipo: Activar para ordenar la columna de manera ascendente">Tipo</th><th class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 80px;" aria-label="Estado: Activar para ordenar la columna de manera ascendente">Estado</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 90px;" aria-label=""></th></tr>
+	                        </thead>
+	                        <tfoot>
+	                            <tr><th rowspan="1" colspan="1">Nombre</th><th rowspan="1" colspan="1">Apellido</th><th rowspan="1" colspan="1">Correo</th><th rowspan="1" colspan="1">Tipo</th><th rowspan="1" colspan="1">Estado</th><th rowspan="1" colspan="1"></th></tr>
+	                        </tfoot>
+	                        <tbody><tr class="odd"><td class="sorting_1">MIGUEL ANGEL</td><td>SIXTEGA ESCRIBANO</td><td>migna0519@gmail.com</td><td>Administrador</td><td><span class="badge badge-success p-2">Activo</span></td><td><button class="btn btn-primary btn-editar btn-sm" data-informacion="{&quot;IdPersona&quot;:3,&quot;Nombre&quot;:&quot;MIGUEL ANGEL&quot;,&quot;Apellido&quot;:&quot;SIXTEGA ESCRIBANO&quot;,&quot;Correo&quot;:&quot;migna0519@gmail.com&quot;,&quot;Clave&quot;:&quot;12345&quot;,&quot;Codigo&quot;:&quot;&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:1,&quot;Descripcion&quot;:&quot;Administrador&quot;},&quot;Estado&quot;:true}"><i class="fas fa-pen"></i></button><button class="btn btn-danger btn-eliminar btn-sm ml-2" data-informacion="{&quot;IdPersona&quot;:3,&quot;Nombre&quot;:&quot;MIGUEL ANGEL&quot;,&quot;Apellido&quot;:&quot;SIXTEGA ESCRIBANO&quot;,&quot;Correo&quot;:&quot;migna0519@gmail.com&quot;,&quot;Clave&quot;:&quot;12345&quot;,&quot;Codigo&quot;:&quot;&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:1,&quot;Descripcion&quot;:&quot;Administrador&quot;},&quot;Estado&quot;:true}"><i class="fas fa-trash"></i></button></td></tr><tr class="even"><td class="sorting_1">milagros</td><td>machucho</td><td>mili@gmail.com</td><td>Lector</td><td><span class="badge badge-success p-2">Activo</span></td><td><button class="btn btn-primary btn-editar btn-sm" data-informacion="{&quot;IdPersona&quot;:4,&quot;Nombre&quot;:&quot;milagros&quot;,&quot;Apellido&quot;:&quot;machucho&quot;,&quot;Correo&quot;:&quot;mili@gmail.com&quot;,&quot;Clave&quot;:&quot;LE000004&quot;,&quot;Codigo&quot;:&quot;LE000004&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:3,&quot;Descripcion&quot;:&quot;Lector&quot;},&quot;Estado&quot;:true}"><i class="fas fa-pen"></i></button><button class="btn btn-danger btn-eliminar btn-sm ml-2" data-informacion="{&quot;IdPersona&quot;:4,&quot;Nombre&quot;:&quot;milagros&quot;,&quot;Apellido&quot;:&quot;machucho&quot;,&quot;Correo&quot;:&quot;mili@gmail.com&quot;,&quot;Clave&quot;:&quot;LE000004&quot;,&quot;Codigo&quot;:&quot;LE000004&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:3,&quot;Descripcion&quot;:&quot;Lector&quot;},&quot;Estado&quot;:true}"><i class="fas fa-trash"></i></button></td></tr><tr class="odd"><td class="sorting_1">Mizuki</td><td>Hayashi</td><td>Mizuki@gmail.com</td><td>Empleado</td><td><span class="badge badge-success p-2">Activo</span></td><td><button class="btn btn-primary btn-editar btn-sm" data-informacion="{&quot;IdPersona&quot;:2,&quot;Nombre&quot;:&quot;Mizuki&quot;,&quot;Apellido&quot;:&quot;Hayashi&quot;,&quot;Correo&quot;:&quot;Mizuki@gmail.com&quot;,&quot;Clave&quot;:&quot;456&quot;,&quot;Codigo&quot;:&quot;&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:2,&quot;Descripcion&quot;:&quot;Empleado&quot;},&quot;Estado&quot;:true}"><i class="fas fa-pen"></i></button><button class="btn btn-danger btn-eliminar btn-sm ml-2" data-informacion="{&quot;IdPersona&quot;:2,&quot;Nombre&quot;:&quot;Mizuki&quot;,&quot;Apellido&quot;:&quot;Hayashi&quot;,&quot;Correo&quot;:&quot;Mizuki@gmail.com&quot;,&quot;Clave&quot;:&quot;456&quot;,&quot;Codigo&quot;:&quot;&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:2,&quot;Descripcion&quot;:&quot;Empleado&quot;},&quot;Estado&quot;:true}"><i class="fas fa-trash"></i></button></td></tr><tr class="even"><td class="sorting_1">Naomi</td><td>Konoe</td><td>Konoe@gmail.com</td><td>Administrador</td><td><span class="badge badge-danger p-2">No Activo</span></td><td><button class="btn btn-primary btn-editar btn-sm" data-informacion="{&quot;IdPersona&quot;:1,&quot;Nombre&quot;:&quot;Naomi&quot;,&quot;Apellido&quot;:&quot;Konoe&quot;,&quot;Correo&quot;:&quot;Konoe@gmail.com&quot;,&quot;Clave&quot;:&quot;123&quot;,&quot;Codigo&quot;:&quot;&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:1,&quot;Descripcion&quot;:&quot;Administrador&quot;},&quot;Estado&quot;:false}"><i class="fas fa-pen"></i></button><button class="btn btn-danger btn-eliminar btn-sm ml-2" data-informacion="{&quot;IdPersona&quot;:1,&quot;Nombre&quot;:&quot;Naomi&quot;,&quot;Apellido&quot;:&quot;Konoe&quot;,&quot;Correo&quot;:&quot;Konoe@gmail.com&quot;,&quot;Clave&quot;:&quot;123&quot;,&quot;Codigo&quot;:&quot;&quot;,&quot;oTipoPersona&quot;:{&quot;IdTipoPersona&quot;:1,&quot;Descripcion&quot;:&quot;Administrador&quot;},&quot;Estado&quot;:false}"><i class="fas fa-trash"></i></button></td></tr></tbody>
+	                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="tabla_info" role="status" aria-live="polite">Mostrando registros del 1 al 4 de un total de 4 registros</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="tabla_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="tabla_previous"><a href="#" aria-controls="tabla" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="tabla" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="tabla_next"><a href="#" aria-controls="tabla" data-dt-idx="2" tabindex="0" class="page-link">Siguiente</a></li></ul></div></div></div></div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="FormModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header bg-primary text-white">
+	                <h5 class="modal-title" id="exampleModalLabel">Usuario</h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true">×</span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+	                <input id="txtid" type="hidden" value="0">
+	                <form id="formNivel" abineguid="44BE7A98456243898AE54E054D339C2F">
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="txtdescripcion">Nombre:</label>
+	                                <input type="text" class="form-control required" id="txtnombre" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="txtdescripcion">Apellido:</label>
+	                                <input type="text" class="form-control required" id="txtapellido" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="txtdescripcion">Correo:</label>
+	                                <input type="text" class="form-control required" id="txtcorreo" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="txtdescripcion">Contraseña:</label>
+	                                <input type="password" class="form-control required" id="txtclave" name="descripcion" autocomplete="off">
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="cbotipo">Tipo:</label>
+	                                <select id="cbotipo" class="form-control">
+	                                <option value="1">Administrador</option><option value="2">Empleado</option></select>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-sm-12">
+	                            <div class="form-group">
+	                                <label for="cboEstado">Estado:</label>
+	                                <select id="cboEstado" class="form-control">
+	                                    <option value="1">Activo</option>
+	                                    <option value="0">No Activo</option>
+	                                </select>
+	                            </div>
+	                        </div>
+	                    </div>
+
+	                </form>
+
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+	                <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
