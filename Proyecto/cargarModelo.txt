@@ -1,0 +1,12 @@
+CLI
+	dotnet ef dbcontext scaffold "server=localhost;port=3306;user=root;password=;database=proyecto" Pomelo.EntityFrameworkCore.MySql -o Models --force
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+http://localhost:17799/api/autores
+http://localhost:17799/api/categorias
+http://localhost:17799/api/editorial
+http://localhost:17799/api/libro
+http://localhost:17799/api/nivel
+http://localhost:17799/api/persona
+http://localhost:17799/api/prove
+
+
