@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace Proyecto.Models
 {
-    public partial class Precompra
+    public partial class Temporal
     {
-        public int IdPre { get; set; }
+        public int IdTem { get; set; }
         public int? IdCompra { get; set; }
         public int? IdLibro { get; set; }
         public int? Cantidad { get; set; }

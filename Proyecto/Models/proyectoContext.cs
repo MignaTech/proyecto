@@ -27,6 +27,7 @@ namespace Proyecto.Models
         public virtual DbSet<Persona> Personas { get; set; }
         public virtual DbSet<Precompra> Precompras { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
+        public virtual DbSet<Temporal> Temporals { get; set; }
         public virtual DbSet<Verentradum> Verentrada { get; set; }
         public virtual DbSet<Verlibro> Verlibros { get; set; }
         public virtual DbSet<Verpersona> Verpersonas { get; set; }
@@ -80,16 +81,9 @@ namespace Proyecto.Models
 
                 entity.ToTable("compra");
 
-                entity.HasCharSet("utf8mb4")
-                    .UseCollation("utf8mb4_0900_ai_ci");
-
                 entity.Property(e => e.IdCompra).ValueGeneratedNever();
 
                 entity.Property(e => e.Fecha).HasColumnType("date");
-
-                entity.Property(e => e.Folio)
-                    .IsRequired()
-                    .HasMaxLength(30);
             });
 
             modelBuilder.Entity<Editorial>(entity =>
@@ -234,9 +228,6 @@ namespace Proyecto.Models
 
                 entity.ToTable("precompra");
 
-                entity.HasCharSet("utf8mb4")
-                    .UseCollation("utf8mb4_0900_ai_ci");
-
                 entity.Property(e => e.IdPre).ValueGeneratedNever();
 
                 entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
@@ -273,6 +264,18 @@ namespace Proyecto.Models
                     .HasForeignKey(d => d.IdEditorial)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("proveedor_editorial");
+            });
+
+            modelBuilder.Entity<Temporal>(entity =>
+            {
+                entity.HasKey(e => e.IdTem)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("temporal");
+
+                entity.Property(e => e.IdTem).ValueGeneratedNever();
+
+                entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
             });
 
             modelBuilder.Entity<Verentradum>(entity =>
