@@ -26,11 +26,15 @@ namespace Proyecto.Models
         public virtual DbSet<NivelUser> NivelUsers { get; set; }
         public virtual DbSet<Persona> Personas { get; set; }
         public virtual DbSet<Precompra> Precompras { get; set; }
+        public virtual DbSet<Precompra2> Precompra2s { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<Temporal> Temporals { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Verentradum> Verentrada { get; set; }
         public virtual DbSet<Verlibro> Verlibros { get; set; }
         public virtual DbSet<Verpersona> Verpersonas { get; set; }
+        public virtual DbSet<Verprecompra> Verprecompras { get; set; }
+        public virtual DbSet<Verproveedor> Verproveedors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -80,8 +84,6 @@ namespace Proyecto.Models
                     .HasName("PRIMARY");
 
                 entity.ToTable("compra");
-
-                entity.Property(e => e.IdCompra).ValueGeneratedNever();
 
                 entity.Property(e => e.Fecha).HasColumnType("date");
             });
@@ -228,9 +230,49 @@ namespace Proyecto.Models
 
                 entity.ToTable("precompra");
 
-                entity.Property(e => e.IdPre).ValueGeneratedNever();
+                entity.HasIndex(e => e.IdCompra, "precompra_compra");
+
+                entity.HasIndex(e => e.IdLibro, "precompra_libro");
 
                 entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
+
+                entity.HasOne(d => d.IdCompraNavigation)
+                    .WithMany(p => p.Precompras)
+                    .HasForeignKey(d => d.IdCompra)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("precompra_compra");
+
+                entity.HasOne(d => d.IdLibroNavigation)
+                    .WithMany(p => p.Precompras)
+                    .HasForeignKey(d => d.IdLibro)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("precompra_libro");
+            });
+
+            modelBuilder.Entity<Precompra2>(entity =>
+            {
+                entity.HasKey(e => e.IdPre)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("precompra2");
+
+                entity.HasIndex(e => e.IdCompra, "precompra_compra");
+
+                entity.HasIndex(e => e.IdLibro, "precompra_libro");
+
+                entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
+
+                entity.HasOne(d => d.IdCompraNavigation)
+                    .WithMany(p => p.Precompra2s)
+                    .HasForeignKey(d => d.IdCompra)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("precompra2_ibfk_1");
+
+                entity.HasOne(d => d.IdLibroNavigation)
+                    .WithMany(p => p.Precompra2s)
+                    .HasForeignKey(d => d.IdLibro)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("precompra2_ibfk_2");
             });
 
             modelBuilder.Entity<Proveedor>(entity =>
@@ -244,8 +286,6 @@ namespace Proyecto.Models
                     .UseCollation("utf8mb4_0900_ai_ci");
 
                 entity.HasIndex(e => e.IdEditorial, "proveedor_editorial");
-
-                entity.Property(e => e.IdProv).ValueGeneratedNever();
 
                 entity.Property(e => e.Correo).HasMaxLength(50);
 
@@ -273,9 +313,60 @@ namespace Proyecto.Models
 
                 entity.ToTable("temporal");
 
-                entity.Property(e => e.IdTem).ValueGeneratedNever();
+                entity.HasIndex(e => e.IdCompra, "temporal_compra");
+
+                entity.HasIndex(e => e.IdLibro, "temporal_libro");
 
                 entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
+
+                entity.HasOne(d => d.IdCompraNavigation)
+                    .WithMany(p => p.Temporals)
+                    .HasForeignKey(d => d.IdCompra)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("temporal_compra");
+
+                entity.HasOne(d => d.IdLibroNavigation)
+                    .WithMany(p => p.Temporals)
+                    .HasForeignKey(d => d.IdLibro)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("temporal_libro");
+            });
+
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.ToTable("usuarios");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.ApellidoMaterno)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .HasColumnName("apellido_materno");
+
+                entity.Property(e => e.ApellidoPaterno)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .HasColumnName("apellido_paterno");
+
+                entity.Property(e => e.Correo)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("correo");
+
+                entity.Property(e => e.Nombre)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("nombre");
+
+                entity.Property(e => e.Password)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("password");
+
+                entity.Property(e => e.Username)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .HasColumnName("username");
             });
 
             modelBuilder.Entity<Verentradum>(entity =>
@@ -359,6 +450,54 @@ namespace Proyecto.Models
                 entity.Property(e => e.Usuario)
                     .IsRequired()
                     .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<Verprecompra>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("verprecompra");
+
+                entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
+
+                entity.Property(e => e.PrecioUnitario).HasPrecision(9, 2);
+
+                entity.Property(e => e.Titulo)
+                    .IsRequired()
+                    .HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<Verproveedor>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("verproveedor");
+
+                entity.Property(e => e.Correo)
+                    .HasMaxLength(50)
+                    .UseCollation("utf8mb4_0900_ai_ci")
+                    .HasCharSet("utf8mb4");
+
+                entity.Property(e => e.Direccion)
+                    .HasMaxLength(50)
+                    .UseCollation("utf8mb4_0900_ai_ci")
+                    .HasCharSet("utf8mb4");
+
+                entity.Property(e => e.Editorial)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Nombre)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .UseCollation("utf8mb4_0900_ai_ci")
+                    .HasCharSet("utf8mb4");
+
+                entity.Property(e => e.Telefono)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .UseCollation("utf8mb4_0900_ai_ci")
+                    .HasCharSet("utf8mb4");
             });
 
             OnModelCreatingPartial(modelBuilder);

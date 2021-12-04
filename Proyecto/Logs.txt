@@ -4756,3 +4756,590 @@ LIMIT 1
 2021-11-27 19:26:29.002 -06:00 [INF] Executed action Proyecto.Controllers.TemporalController.GetTemporal (Proyecto) in 35.9994ms
 2021-11-27 19:26:29.007 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.TemporalController.GetTemporal (Proyecto)'
 2021-11-27 19:26:29.012 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/temporal/1 - - - 200 - application/json;+charset=utf-8 62.6905ms
+2021-11-29 17:20:28.373 -06:00 [INF] User profile is available. Using 'C:\Users\lupit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-29 17:20:30.549 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-29 17:20:30.554 -06:00 [INF] Hosting environment: Development
+2021-11-29 17:20:30.558 -06:00 [INF] Content root path: D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto
+2021-11-29 17:20:30.769 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/index.html - -
+2021-11-29 17:20:31.316 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/index.html - - - 200 - text/html;charset=utf-8 553.2147ms
+2021-11-29 17:20:33.009 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/v1/swagger.json - -
+2021-11-29 17:20:34.063 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1053.6314ms
+2021-11-29 17:21:11.782 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/usuarios - -
+2021-11-29 17:21:13.781 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto)'
+2021-11-29 17:21:13.870 -06:00 [INF] Route matched with {action = "GetAllUsuario", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsuario() on controller Proyecto.Controllers.UsuarioController (Proyecto).
+2021-11-29 17:21:15.135 -06:00 [INF]  - Getting Autores list
+2021-11-29 17:21:15.194 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-11-29 17:21:17.132 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-11-29 17:21:17.407 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-11-29 17:21:17.412 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-11-29 17:21:18.336 -06:00 [INF] Executed DbCommand (102ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`id` AS `Id`, `u`.`apellido_paterno` AS `ApellidoPaterno`, `u`.`apellido_materno` AS `ApellidoMaterno`, `u`.`nombre` AS `Nombre`, `u`.`correo` AS `Correo`, `u`.`username` AS `Username`, `u`.`password` AS `Password`
+FROM `usuarios` AS `u`
+LIMIT @__p_1 OFFSET @__p_0
+2021-11-29 17:21:18.408 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType44`7[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-29 17:21:18.472 -06:00 [INF] Executed action Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto) in 4587.7258ms
+2021-11-29 17:21:18.477 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto)'
+2021-11-29 17:21:18.495 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/usuarios - - - 200 - application/json;+charset=utf-8 6712.9700ms
+2021-11-29 17:21:19.411 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/favicon.ico - -
+2021-11-29 17:21:19.438 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/favicon.ico - - - 404 - - 27.7275ms
+2021-11-29 17:22:41.692 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/usuarios - -
+2021-11-29 17:22:41.742 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto)'
+2021-11-29 17:22:41.748 -06:00 [INF] Route matched with {action = "GetAllUsuario", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsuario() on controller Proyecto.Controllers.UsuarioController (Proyecto).
+2021-11-29 17:22:41.763 -06:00 [INF]  - Getting Autores list
+2021-11-29 17:22:41.777 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-11-29 17:22:41.839 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-11-29 17:22:41.884 -06:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`id` AS `Id`, `u`.`apellido_paterno` AS `ApellidoPaterno`, `u`.`apellido_materno` AS `ApellidoMaterno`, `u`.`nombre` AS `Nombre`, `u`.`correo` AS `Correo`, `u`.`username` AS `Username`, `u`.`password` AS `Password`
+FROM `usuarios` AS `u`
+LIMIT @__p_1 OFFSET @__p_0
+2021-11-29 17:22:41.889 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType44`7[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-29 17:22:41.895 -06:00 [INF] Executed action Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto) in 141.4982ms
+2021-11-29 17:22:41.900 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto)'
+2021-11-29 17:22:41.905 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/usuarios - - - 200 - application/json;+charset=utf-8 213.5001ms
+2021-11-29 17:26:15.524 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/usuarios - -
+2021-11-29 17:26:15.529 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto)'
+2021-11-29 17:26:15.534 -06:00 [INF] Route matched with {action = "GetAllUsuario", controller = "Usuario"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllUsuario() on controller Proyecto.Controllers.UsuarioController (Proyecto).
+2021-11-29 17:26:15.541 -06:00 [INF]  - Getting Autores list
+2021-11-29 17:26:15.546 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-11-29 17:26:15.570 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-11-29 17:26:16.090 -06:00 [INF] Executed DbCommand (496ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`id` AS `Id`, `u`.`apellido_paterno` AS `ApellidoPaterno`, `u`.`apellido_materno` AS `ApellidoMaterno`, `u`.`nombre` AS `Nombre`, `u`.`correo` AS `Correo`, `u`.`username` AS `Username`, `u`.`password` AS `Password`
+FROM `usuarios` AS `u`
+LIMIT @__p_1 OFFSET @__p_0
+2021-11-29 17:26:16.096 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType44`7[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-11-29 17:26:16.102 -06:00 [INF] Executed action Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto) in 564.1738ms
+2021-11-29 17:26:16.111 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.UsuarioController.GetAllUsuario (Proyecto)'
+2021-11-29 17:26:16.118 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/usuarios - - - 200 - application/json;+charset=utf-8 592.5907ms
+2021-11-29 19:15:52.519 -06:00 [INF] User profile is available. Using 'C:\Users\lupit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-29 19:15:52.771 -06:00 [INF] Now listening on: http://localhost:5000
+2021-11-29 19:15:52.772 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-29 19:15:52.773 -06:00 [INF] Hosting environment: Development
+2021-11-29 19:15:52.774 -06:00 [INF] Content root path: D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto
+2021-11-29 19:17:55.525 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/employees - -
+2021-11-29 19:17:55.564 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:17:55.571 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/employees - - - 204 - - 47.8702ms
+2021-11-29 19:17:55.579 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:17:55.592 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:17:55.986 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-11-29 19:17:56.144 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2021-11-29 19:17:56.190 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 611.3009ms
+2021-11-29 19:18:50.467 -06:00 [INF] Application is shutting down...
+2021-11-29 19:23:03.457 -06:00 [INF] User profile is available. Using 'C:\Users\lupit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-29 19:23:03.612 -06:00 [INF] Now listening on: http://localhost:5000
+2021-11-29 19:23:03.615 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-29 19:23:03.616 -06:00 [INF] Hosting environment: Development
+2021-11-29 19:23:03.617 -06:00 [INF] Content root path: D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto
+2021-11-29 19:24:28.880 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/employees - -
+2021-11-29 19:24:28.918 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:24:28.924 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/employees - - - 204 - - 45.4200ms
+2021-11-29 19:24:28.930 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:24:28.944 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:24:29.042 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-11-29 19:24:29.067 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2021-11-29 19:24:29.071 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 141.0249ms
+2021-11-29 19:26:33.512 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/employees - -
+2021-11-29 19:26:33.515 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:26:33.515 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/employees - - - 204 - - 3.6112ms
+2021-11-29 19:26:33.525 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:26:33.528 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:26:33.530 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-11-29 19:26:33.535 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2021-11-29 19:26:33.535 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 10.1718ms
+2021-11-29 19:26:47.575 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/employees - -
+2021-11-29 19:26:47.578 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:26:47.579 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/employees - - - 204 - - 3.7487ms
+2021-11-29 19:26:47.591 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:26:47.593 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:26:47.595 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-11-29 19:26:47.599 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2021-11-29 19:26:47.601 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 9.8896ms
+2021-11-29 19:26:55.378 -06:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/employees - -
+2021-11-29 19:26:55.380 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:26:55.381 -06:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/employees - - - 204 - - 3.0802ms
+2021-11-29 19:26:55.387 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:26:55.388 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:26:55.389 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-11-29 19:26:55.392 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2021-11-29 19:26:55.393 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 6.7776ms
+2021-11-29 19:27:00.043 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:27:00.046 -06:00 [INF] CORS policy execution successful.
+2021-11-29 19:27:00.047 -06:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-11-29 19:27:00.052 -06:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2021-11-29 19:27:00.054 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 10.8337ms
+2021-11-29 19:27:21.953 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:27:21.955 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 1.7812ms
+2021-11-29 19:27:22.082 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - -
+2021-11-29 19:27:22.085 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - - - 404 0 - 2.7725ms
+2021-11-29 19:28:01.338 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/employees - -
+2021-11-29 19:28:01.340 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/employees - - - 404 0 - 2.1666ms
+2021-11-29 19:28:21.507 -06:00 [INF] Application is shutting down...
+2021-12-03 14:46:58.795 -06:00 [INF] User profile is available. Using 'C:\Users\lupit\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-03 14:47:02.325 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-03 14:47:02.330 -06:00 [INF] Hosting environment: Development
+2021-12-03 14:47:02.334 -06:00 [INF] Content root path: D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto
+2021-12-03 14:47:02.629 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger - -
+2021-12-03 14:47:02.856 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger - - - 301 - - 230.6469ms
+2021-12-03 14:47:02.893 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/index.html - -
+2021-12-03 14:47:04.170 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/index.html - - - 200 - text/html;charset=utf-8 1276.8118ms
+2021-12-03 14:47:04.191 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/swagger-ui.css - -
+2021-12-03 14:47:04.205 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/favicon-32x32.png - -
+2021-12-03 14:47:04.216 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/swagger-ui-bundle.js - -
+2021-12-03 14:47:04.216 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/swagger-ui-standalone-preset.js - -
+2021-12-03 14:47:04.355 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-12-03 14:47:04.360 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/favicon-32x32.png - - - 200 628 image/png 153.9593ms
+2021-12-03 14:47:04.614 -06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-12-03 14:47:04.633 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 416.2020ms
+2021-12-03 14:47:04.720 -06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-12-03 14:47:04.728 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/swagger-ui.css - - - 200 143632 text/css 537.0709ms
+2021-12-03 14:47:05.087 -06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-12-03 14:47:05.128 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 926.1967ms
+2021-12-03 14:47:05.847 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/v1/swagger.json - -
+2021-12-03 14:47:06.544 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 696.5089ms
+2021-12-03 14:47:06.673 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/swagger/favicon-32x32.png - -
+2021-12-03 14:47:06.679 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-12-03 14:47:06.684 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/swagger/favicon-32x32.png - - - 200 628 image/png 11.2241ms
+2021-12-03 14:47:35.942 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/autores/ - -
+2021-12-03 14:47:40.392 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.AutorController.GetAllAutor (Proyecto)'
+2021-12-03 14:47:40.483 -06:00 [INF] Route matched with {action = "GetAllAutor", controller = "Autor"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAutor() on controller Proyecto.Controllers.AutorController (Proyecto).
+2021-12-03 14:47:45.538 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:47:45.742 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-12-03 14:47:47.933 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:47:48.409 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:47:48.415 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:47:49.825 -06:00 [INF] Executed DbCommand (411ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`IdAutor`, `a`.`Nombre`, CASE
+    WHEN `a`.`Estado` = 1 THEN 'Activo'
+    ELSE 'Inactivo'
+END AS `Estado`
+FROM `autor` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:47:49.948 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:47:50.241 -06:00 [INF] Executed action Proyecto.Controllers.AutorController.GetAllAutor (Proyecto) in 9728.2076ms
+2021-12-03 14:47:50.247 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.AutorController.GetAllAutor (Proyecto)'
+2021-12-03 14:47:50.260 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/autores/ - - - 200 - application/json;+charset=utf-8 14317.6233ms
+2021-12-03 14:48:30.746 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/categorias/ - -
+2021-12-03 14:48:30.758 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.CategoriController.GetAllCategoria (Proyecto)'
+2021-12-03 14:48:30.929 -06:00 [INF] Route matched with {action = "GetAllCategoria", controller = "Categori"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCategoria() on controller Proyecto.Controllers.CategoriController (Proyecto).
+2021-12-03 14:48:30.936 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:48:30.943 -06:00 [INF] Fetching information for Categoria from 0 to 100
+2021-12-03 14:48:31.006 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:48:31.021 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:31.026 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:31.087 -06:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`IdCategoria`, `c`.`Nombre`, CASE
+    WHEN `c`.`Estado` = 1 THEN 'Activo'
+    ELSE 'Inactivo'
+END AS `Estado`
+FROM `categoria` AS `c`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:48:31.093 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType5`3[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:48:31.100 -06:00 [INF] Executed action Proyecto.Controllers.CategoriController.GetAllCategoria (Proyecto) in 166.013ms
+2021-12-03 14:48:31.105 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.CategoriController.GetAllCategoria (Proyecto)'
+2021-12-03 14:48:31.109 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/categorias/ - - - 200 - application/json;+charset=utf-8 363.8926ms
+2021-12-03 14:48:43.338 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/editorial/ - -
+2021-12-03 14:48:43.362 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.EditorialController.GetAllEditorial (Proyecto)'
+2021-12-03 14:48:43.368 -06:00 [INF] Route matched with {action = "GetAllEditorial", controller = "Editorial"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllEditorial() on controller Proyecto.Controllers.EditorialController (Proyecto).
+2021-12-03 14:48:43.406 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:48:43.456 -06:00 [INF] Fetching information for Editorial from 0 to 100
+2021-12-03 14:48:43.476 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:48:43.484 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:43.489 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:43.507 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `e`.`IdEditorial`, `e`.`Nombre`, CASE
+    WHEN `e`.`Estado` = 1 THEN 'Activo'
+    ELSE 'Inactivo'
+END AS `Estado`
+FROM `editorial` AS `e`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:48:43.513 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType13`3[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:48:43.520 -06:00 [INF] Executed action Proyecto.Controllers.EditorialController.GetAllEditorial (Proyecto) in 147.149ms
+2021-12-03 14:48:43.525 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.EditorialController.GetAllEditorial (Proyecto)'
+2021-12-03 14:48:43.529 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/editorial/ - - - 200 - application/json;+charset=utf-8 191.0781ms
+2021-12-03 14:48:47.583 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/persona/ - -
+2021-12-03 14:48:47.588 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PersonaController.GetAllPersona (Proyecto)'
+2021-12-03 14:48:47.595 -06:00 [INF] Route matched with {action = "GetAllPersona", controller = "Persona"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPersona() on controller Proyecto.Controllers.PersonaController (Proyecto).
+2021-12-03 14:48:47.602 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:48:47.608 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-12-03 14:48:47.614 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:48:47.621 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:47.626 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:47.692 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPersona`, `p`.`Nombre`, `p`.`Apellido`, `p`.`Direccion`, `p`.`Telefono`, `p`.`Correo`, `p`.`Usuario`, `p`.`Password`, `p`.`IdNivel`, `p`.`Estado`
+FROM `persona` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:48:47.700 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType28`10[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:48:47.716 -06:00 [INF] Executed action Proyecto.Controllers.PersonaController.GetAllPersona (Proyecto) in 116.226ms
+2021-12-03 14:48:47.721 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PersonaController.GetAllPersona (Proyecto)'
+2021-12-03 14:48:47.726 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/persona/ - - - 200 - application/json;+charset=utf-8 142.4363ms
+2021-12-03 14:48:54.480 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/libro/ - -
+2021-12-03 14:48:54.485 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.LibroController.GetAllLibro (Proyecto)'
+2021-12-03 14:48:54.490 -06:00 [INF] Route matched with {action = "GetAllLibro", controller = "Libro"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllLibro() on controller Proyecto.Controllers.LibroController (Proyecto).
+2021-12-03 14:48:54.497 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:48:54.503 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-12-03 14:48:54.508 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:48:54.524 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:54.528 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:48:55.574 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Autor`, `v`.`Categoria`, `v`.`Costo`, `v`.`Editorial`, `v`.`Ejemplares`, `v`.`Estado`, `v`.`FechaPublicacion`, `v`.`IdLibro`, `v`.`Precio`, `v`.`Titulo`, `v`.`Ubicacion`
+FROM `verlibro` AS `v`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:48:55.599 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Proyecto.Models.Verlibro, Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:48:55.638 -06:00 [INF] Executed action Proyecto.Controllers.LibroController.GetAllLibro (Proyecto) in 1142.8255ms
+2021-12-03 14:48:55.643 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.LibroController.GetAllLibro (Proyecto)'
+2021-12-03 14:48:55.648 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/libro/ - - - 200 - application/json;+charset=utf-8 1167.6108ms
+2021-12-03 14:48:59.714 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/libro/ - -
+2021-12-03 14:48:59.718 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.LibroController.GetAllLibro (Proyecto)'
+2021-12-03 14:48:59.723 -06:00 [INF] Route matched with {action = "GetAllLibro", controller = "Libro"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllLibro() on controller Proyecto.Controllers.LibroController (Proyecto).
+2021-12-03 14:48:59.729 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:48:59.733 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-12-03 14:48:59.737 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:48:59.791 -06:00 [INF] Executed DbCommand (41ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`Autor`, `v`.`Categoria`, `v`.`Costo`, `v`.`Editorial`, `v`.`Ejemplares`, `v`.`Estado`, `v`.`FechaPublicacion`, `v`.`IdLibro`, `v`.`Precio`, `v`.`Titulo`, `v`.`Ubicacion`
+FROM `verlibro` AS `v`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:48:59.796 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Proyecto.Models.Verlibro, Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:48:59.802 -06:00 [INF] Executed action Proyecto.Controllers.LibroController.GetAllLibro (Proyecto) in 73.6206ms
+2021-12-03 14:48:59.806 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.LibroController.GetAllLibro (Proyecto)'
+2021-12-03 14:48:59.811 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/libro/ - - - 200 - application/json;+charset=utf-8 97.5056ms
+2021-12-03 14:49:02.551 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/prove/ - -
+2021-12-03 14:49:02.556 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.ProveController.GetAllProveedor (Proyecto)'
+2021-12-03 14:49:02.563 -06:00 [INF] Route matched with {action = "GetAllProveedor", controller = "Prove"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllProveedor() on controller Proyecto.Controllers.ProveController (Proyecto).
+2021-12-03 14:49:02.569 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:49:02.575 -06:00 [INF] Fetching information for Autor from 0 to 100
+2021-12-03 14:49:02.580 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:02.587 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:02.591 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:02.609 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdEditorial`, `p`.`Nombre`, `p`.`Telefono`, `p`.`Direccion`, `p`.`Correo`
+FROM `proveedor` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:02.615 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType36`5[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:02.623 -06:00 [INF] Executed action Proyecto.Controllers.ProveController.GetAllProveedor (Proyecto) in 55.7479ms
+2021-12-03 14:49:02.627 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.ProveController.GetAllProveedor (Proyecto)'
+2021-12-03 14:49:02.632 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/prove/ - - - 200 - application/json;+charset=utf-8 81.0727ms
+2021-12-03 14:49:12.497 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/entradaproductos/ - -
+2021-12-03 14:49:12.502 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.EntradaproductoController.GetAllEntradaproducto (Proyecto)'
+2021-12-03 14:49:12.508 -06:00 [INF] Route matched with {action = "GetAllEntradaproducto", controller = "Entradaproducto"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllEntradaproducto() on controller Proyecto.Controllers.EntradaproductoController (Proyecto).
+2021-12-03 14:49:12.513 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:49:12.519 -06:00 [INF] Fetching information for Entradaproducto from 0 to 100
+2021-12-03 14:49:12.525 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:12.532 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:12.536 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:12.580 -06:00 [INF] Executed DbCommand (32ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `v`.`IdProd`, `v`.`Fecha`, `v`.`Titulo` AS `Libro`, `v`.`Cantidad`
+FROM `verentrada` AS `v`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:12.586 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType17`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:12.596 -06:00 [INF] Executed action Proyecto.Controllers.EntradaproductoController.GetAllEntradaproducto (Proyecto) in 84.3104ms
+2021-12-03 14:49:12.601 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.EntradaproductoController.GetAllEntradaproducto (Proyecto)'
+2021-12-03 14:49:12.606 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/entradaproductos/ - - - 200 - application/json;+charset=utf-8 108.8688ms
+2021-12-03 14:49:17.059 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/nivel/ - -
+2021-12-03 14:49:17.064 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.NivelController.GetAllNivel (Proyecto)'
+2021-12-03 14:49:17.070 -06:00 [INF] Route matched with {action = "GetAllNivel", controller = "Nivel"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllNivel() on controller Proyecto.Controllers.NivelController (Proyecto).
+2021-12-03 14:49:17.076 -06:00 [INF]  - Getting Autores list
+2021-12-03 14:49:17.082 -06:00 [INF] Fetching information for Nivel de Usuario from 0 to 100
+2021-12-03 14:49:17.088 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:17.095 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:17.100 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:17.116 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `n`.`IdNivelUser`, `n`.`Nombre`
+FROM `nivel_user` AS `n`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:17.121 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType24`2[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:17.128 -06:00 [INF] Executed action Proyecto.Controllers.NivelController.GetAllNivel (Proyecto) in 53.6299ms
+2021-12-03 14:49:17.133 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.NivelController.GetAllNivel (Proyecto)'
+2021-12-03 14:49:17.138 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/nivel/ - - - 200 - application/json;+charset=utf-8 78.8933ms
+2021-12-03 14:49:21.542 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/compra/ - -
+2021-12-03 14:49:21.547 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:49:21.554 -06:00 [INF] Route matched with {action = "GetAllCompra", controller = "Compras"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompra() on controller Proyecto.Controllers.ComprasController (Proyecto).
+2021-12-03 14:49:21.561 -06:00 [INF]  - Getting Compras list
+2021-12-03 14:49:21.568 -06:00 [INF] Fetching information for Compra from 0 to 100
+2021-12-03 14:49:21.573 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:21.580 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:21.585 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:21.686 -06:00 [INF] Executed DbCommand (87ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`IdCompra`, `c`.`Fecha`, `c`.`IdEmpleado`, `c`.`TotalCompra`
+FROM `compra` AS `c`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:21.692 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType9`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:21.704 -06:00 [INF] Executed action Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto) in 144.4064ms
+2021-12-03 14:49:21.709 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:49:21.714 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/compra/ - - - 200 - application/json;+charset=utf-8 171.4261ms
+2021-12-03 14:49:31.530 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/precompra/ - -
+2021-12-03 14:49:31.534 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:31.540 -06:00 [INF] Route matched with {action = "GetAllPrecompra", controller = "Precompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPrecompra() on controller Proyecto.Controllers.PrecompraController (Proyecto).
+2021-12-03 14:49:31.546 -06:00 [INF]  - Getting Precompras list
+2021-12-03 14:49:31.551 -06:00 [INF] Fetching information for Precompra from 0 to 100
+2021-12-03 14:49:31.556 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:31.563 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:31.567 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:31.586 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPre`, `p`.`IdCompra`, `p`.`IdLibro`, `p`.`Cantidad`, `p`.`PrecioTotal`, `p`.`Estado`
+FROM `precompra` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:31.592 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType32`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:31.599 -06:00 [INF] Executed action Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto) in 55.2736ms
+2021-12-03 14:49:31.604 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:31.608 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/precompra/ - - - 200 - application/json;+charset=utf-8 78.3770ms
+2021-12-03 14:49:39.666 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/precompra/ - -
+2021-12-03 14:49:39.671 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:39.676 -06:00 [INF] Route matched with {action = "GetAllPrecompra", controller = "Precompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPrecompra() on controller Proyecto.Controllers.PrecompraController (Proyecto).
+2021-12-03 14:49:39.681 -06:00 [INF]  - Getting Precompras list
+2021-12-03 14:49:39.685 -06:00 [INF] Fetching information for Precompra from 0 to 100
+2021-12-03 14:49:39.690 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:39.707 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPre`, `p`.`IdCompra`, `p`.`IdLibro`, `p`.`Cantidad`, `p`.`PrecioTotal`, `p`.`Estado`
+FROM `precompra` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:39.712 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType32`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:39.717 -06:00 [INF] Executed action Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto) in 36.6083ms
+2021-12-03 14:49:39.721 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:39.726 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/precompra/ - - - 200 - application/json;+charset=utf-8 60.2700ms
+2021-12-03 14:49:40.627 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/precompra/ - -
+2021-12-03 14:49:40.631 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:40.636 -06:00 [INF] Route matched with {action = "GetAllPrecompra", controller = "Precompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPrecompra() on controller Proyecto.Controllers.PrecompraController (Proyecto).
+2021-12-03 14:49:40.643 -06:00 [INF]  - Getting Precompras list
+2021-12-03 14:49:40.648 -06:00 [INF] Fetching information for Precompra from 0 to 100
+2021-12-03 14:49:40.652 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:40.667 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPre`, `p`.`IdCompra`, `p`.`IdLibro`, `p`.`Cantidad`, `p`.`PrecioTotal`, `p`.`Estado`
+FROM `precompra` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:40.672 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType32`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:40.677 -06:00 [INF] Executed action Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto) in 36.5159ms
+2021-12-03 14:49:40.682 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:40.687 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/precompra/ - - - 200 - application/json;+charset=utf-8 60.3630ms
+2021-12-03 14:49:41.544 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/precompra/ - -
+2021-12-03 14:49:41.549 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:41.553 -06:00 [INF] Route matched with {action = "GetAllPrecompra", controller = "Precompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPrecompra() on controller Proyecto.Controllers.PrecompraController (Proyecto).
+2021-12-03 14:49:41.559 -06:00 [INF]  - Getting Precompras list
+2021-12-03 14:49:41.563 -06:00 [INF] Fetching information for Precompra from 0 to 100
+2021-12-03 14:49:41.567 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:41.580 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPre`, `p`.`IdCompra`, `p`.`IdLibro`, `p`.`Cantidad`, `p`.`PrecioTotal`, `p`.`Estado`
+FROM `precompra` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:41.585 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType32`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:41.590 -06:00 [INF] Executed action Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto) in 31.283ms
+2021-12-03 14:49:41.593 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:41.597 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/precompra/ - - - 200 - application/json;+charset=utf-8 52.9893ms
+2021-12-03 14:49:42.187 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/precompra/ - -
+2021-12-03 14:49:42.192 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:42.196 -06:00 [INF] Route matched with {action = "GetAllPrecompra", controller = "Precompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPrecompra() on controller Proyecto.Controllers.PrecompraController (Proyecto).
+2021-12-03 14:49:42.202 -06:00 [INF]  - Getting Precompras list
+2021-12-03 14:49:42.206 -06:00 [INF] Fetching information for Precompra from 0 to 100
+2021-12-03 14:49:42.210 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:42.225 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPre`, `p`.`IdCompra`, `p`.`IdLibro`, `p`.`Cantidad`, `p`.`PrecioTotal`, `p`.`Estado`
+FROM `precompra` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:42.229 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType32`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:42.233 -06:00 [INF] Executed action Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto) in 31.9792ms
+2021-12-03 14:49:42.237 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:42.241 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/precompra/ - - - 200 - application/json;+charset=utf-8 53.7140ms
+2021-12-03 14:49:43.321 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/precompra/ - -
+2021-12-03 14:49:43.327 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:43.331 -06:00 [INF] Route matched with {action = "GetAllPrecompra", controller = "Precompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPrecompra() on controller Proyecto.Controllers.PrecompraController (Proyecto).
+2021-12-03 14:49:43.336 -06:00 [INF]  - Getting Precompras list
+2021-12-03 14:49:43.339 -06:00 [INF] Fetching information for Precompra from 0 to 100
+2021-12-03 14:49:43.344 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:43.358 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPre`, `p`.`IdCompra`, `p`.`IdLibro`, `p`.`Cantidad`, `p`.`PrecioTotal`, `p`.`Estado`
+FROM `precompra` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:43.362 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType32`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:43.366 -06:00 [INF] Executed action Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto) in 30.754ms
+2021-12-03 14:49:43.370 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:43.374 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/precompra/ - - - 200 - application/json;+charset=utf-8 52.3734ms
+2021-12-03 14:49:43.804 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/precompra/ - -
+2021-12-03 14:49:43.808 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:43.812 -06:00 [INF] Route matched with {action = "GetAllPrecompra", controller = "Precompra"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPrecompra() on controller Proyecto.Controllers.PrecompraController (Proyecto).
+2021-12-03 14:49:43.817 -06:00 [INF]  - Getting Precompras list
+2021-12-03 14:49:43.821 -06:00 [INF] Fetching information for Precompra from 0 to 100
+2021-12-03 14:49:43.826 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:43.840 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`IdPre`, `p`.`IdCompra`, `p`.`IdLibro`, `p`.`Cantidad`, `p`.`PrecioTotal`, `p`.`Estado`
+FROM `precompra` AS `p`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:43.844 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType32`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:43.849 -06:00 [INF] Executed action Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto) in 32.8999ms
+2021-12-03 14:49:43.854 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.PrecompraController.GetAllPrecompra (Proyecto)'
+2021-12-03 14:49:43.858 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/precompra/ - - - 200 - application/json;+charset=utf-8 53.6148ms
+2021-12-03 14:49:48.281 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/temporal/ - -
+2021-12-03 14:49:48.286 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:48.292 -06:00 [INF] Route matched with {action = "GetAllTemporal", controller = "Temporal"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllTemporal() on controller Proyecto.Controllers.TemporalController (Proyecto).
+2021-12-03 14:49:48.298 -06:00 [INF]  - Getting Temporal list
+2021-12-03 14:49:48.303 -06:00 [INF] Fetching information for Temporal from 0 to 100
+2021-12-03 14:49:48.309 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:48.316 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:48.321 -06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-12-03 14:49:48.361 -06:00 [INF] Executed DbCommand (28ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`IdTem`, `t`.`IdCompra`, `t`.`IdLibro`, `t`.`Cantidad`, `t`.`PrecioTotal`, `t`.`Estado`
+FROM `temporal` AS `t`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:48.367 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType40`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:48.375 -06:00 [INF] Executed action Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto) in 78.7596ms
+2021-12-03 14:49:48.380 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:48.385 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/temporal/ - - - 200 - application/json;+charset=utf-8 104.0925ms
+2021-12-03 14:49:49.479 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/temporal/ - -
+2021-12-03 14:49:49.484 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:49.488 -06:00 [INF] Route matched with {action = "GetAllTemporal", controller = "Temporal"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllTemporal() on controller Proyecto.Controllers.TemporalController (Proyecto).
+2021-12-03 14:49:49.492 -06:00 [INF]  - Getting Temporal list
+2021-12-03 14:49:49.497 -06:00 [INF] Fetching information for Temporal from 0 to 100
+2021-12-03 14:49:49.502 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:49.516 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`IdTem`, `t`.`IdCompra`, `t`.`IdLibro`, `t`.`Cantidad`, `t`.`PrecioTotal`, `t`.`Estado`
+FROM `temporal` AS `t`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:49.520 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType40`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:49.526 -06:00 [INF] Executed action Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto) in 33.8274ms
+2021-12-03 14:49:49.530 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:49.535 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/temporal/ - - - 200 - application/json;+charset=utf-8 56.1485ms
+2021-12-03 14:49:50.108 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/temporal/ - -
+2021-12-03 14:49:50.113 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:50.118 -06:00 [INF] Route matched with {action = "GetAllTemporal", controller = "Temporal"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllTemporal() on controller Proyecto.Controllers.TemporalController (Proyecto).
+2021-12-03 14:49:50.124 -06:00 [INF]  - Getting Temporal list
+2021-12-03 14:49:50.130 -06:00 [INF] Fetching information for Temporal from 0 to 100
+2021-12-03 14:49:50.135 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:50.150 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`IdTem`, `t`.`IdCompra`, `t`.`IdLibro`, `t`.`Cantidad`, `t`.`PrecioTotal`, `t`.`Estado`
+FROM `temporal` AS `t`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:50.154 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType40`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:50.160 -06:00 [INF] Executed action Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto) in 37.4512ms
+2021-12-03 14:49:50.165 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:50.169 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/temporal/ - - - 200 - application/json;+charset=utf-8 60.7502ms
+2021-12-03 14:49:50.914 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/temporal/ - -
+2021-12-03 14:49:51.192 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:51.197 -06:00 [INF] Route matched with {action = "GetAllTemporal", controller = "Temporal"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllTemporal() on controller Proyecto.Controllers.TemporalController (Proyecto).
+2021-12-03 14:49:51.201 -06:00 [INF]  - Getting Temporal list
+2021-12-03 14:49:51.206 -06:00 [INF] Fetching information for Temporal from 0 to 100
+2021-12-03 14:49:51.211 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:51.223 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`IdTem`, `t`.`IdCompra`, `t`.`IdLibro`, `t`.`Cantidad`, `t`.`PrecioTotal`, `t`.`Estado`
+FROM `temporal` AS `t`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:51.227 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType40`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:51.232 -06:00 [INF] Executed action Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto) in 30.8365ms
+2021-12-03 14:49:51.237 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:49:51.241 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/temporal/ - - - 200 - application/json;+charset=utf-8 326.5251ms
+2021-12-03 14:49:54.119 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/compra/ - -
+2021-12-03 14:49:54.124 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:49:54.128 -06:00 [INF] Route matched with {action = "GetAllCompra", controller = "Compras"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompra() on controller Proyecto.Controllers.ComprasController (Proyecto).
+2021-12-03 14:49:54.133 -06:00 [INF]  - Getting Compras list
+2021-12-03 14:49:54.138 -06:00 [INF] Fetching information for Compra from 0 to 100
+2021-12-03 14:49:54.143 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:54.156 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`IdCompra`, `c`.`Fecha`, `c`.`IdEmpleado`, `c`.`TotalCompra`
+FROM `compra` AS `c`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:54.161 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType9`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:54.167 -06:00 [INF] Executed action Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto) in 34.4004ms
+2021-12-03 14:49:54.172 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:49:54.176 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/compra/ - - - 200 - application/json;+charset=utf-8 57.3053ms
+2021-12-03 14:49:54.954 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/compra/ - -
+2021-12-03 14:49:54.959 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:49:54.963 -06:00 [INF] Route matched with {action = "GetAllCompra", controller = "Compras"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompra() on controller Proyecto.Controllers.ComprasController (Proyecto).
+2021-12-03 14:49:54.968 -06:00 [INF]  - Getting Compras list
+2021-12-03 14:49:54.973 -06:00 [INF] Fetching information for Compra from 0 to 100
+2021-12-03 14:49:54.978 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:49:54.992 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`IdCompra`, `c`.`Fecha`, `c`.`IdEmpleado`, `c`.`TotalCompra`
+FROM `compra` AS `c`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:49:54.997 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType9`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:49:55.004 -06:00 [INF] Executed action Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto) in 37.249ms
+2021-12-03 14:49:55.009 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:49:55.013 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/compra/ - - - 200 - application/json;+charset=utf-8 59.2956ms
+2021-12-03 14:50:04.594 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/compra/ - -
+2021-12-03 14:50:04.599 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:50:04.604 -06:00 [INF] Route matched with {action = "GetAllCompra", controller = "Compras"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompra() on controller Proyecto.Controllers.ComprasController (Proyecto).
+2021-12-03 14:50:04.609 -06:00 [INF]  - Getting Compras list
+2021-12-03 14:50:04.614 -06:00 [INF] Fetching information for Compra from 0 to 100
+2021-12-03 14:50:04.619 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:50:04.632 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`IdCompra`, `c`.`Fecha`, `c`.`IdEmpleado`, `c`.`TotalCompra`
+FROM `compra` AS `c`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:50:04.637 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType9`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:50:04.642 -06:00 [INF] Executed action Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto) in 33.6229ms
+2021-12-03 14:50:04.647 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:50:04.653 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/compra/ - - - 200 - application/json;+charset=utf-8 58.3320ms
+2021-12-03 14:50:05.670 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/compra/ - -
+2021-12-03 14:50:05.673 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:50:05.677 -06:00 [INF] Route matched with {action = "GetAllCompra", controller = "Compras"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompra() on controller Proyecto.Controllers.ComprasController (Proyecto).
+2021-12-03 14:50:05.681 -06:00 [INF]  - Getting Compras list
+2021-12-03 14:50:05.686 -06:00 [INF] Fetching information for Compra from 0 to 100
+2021-12-03 14:50:05.691 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:50:05.707 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`IdCompra`, `c`.`Fecha`, `c`.`IdEmpleado`, `c`.`TotalCompra`
+FROM `compra` AS `c`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:50:05.712 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType9`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:50:05.717 -06:00 [INF] Executed action Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto) in 35.7859ms
+2021-12-03 14:50:05.722 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:50:05.728 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/compra/ - - - 200 - application/json;+charset=utf-8 58.0239ms
+2021-12-03 14:50:06.677 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/compra/ - -
+2021-12-03 14:50:06.683 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:50:06.687 -06:00 [INF] Route matched with {action = "GetAllCompra", controller = "Compras"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllCompra() on controller Proyecto.Controllers.ComprasController (Proyecto).
+2021-12-03 14:50:06.692 -06:00 [INF]  - Getting Compras list
+2021-12-03 14:50:06.696 -06:00 [INF] Fetching information for Compra from 0 to 100
+2021-12-03 14:50:06.702 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:50:06.716 -06:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`IdCompra`, `c`.`Fecha`, `c`.`IdEmpleado`, `c`.`TotalCompra`
+FROM `compra` AS `c`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:50:06.721 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType9`4[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:50:06.725 -06:00 [INF] Executed action Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto) in 33.821ms
+2021-12-03 14:50:06.730 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.ComprasController.GetAllCompra (Proyecto)'
+2021-12-03 14:50:06.735 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/compra/ - - - 200 - application/json;+charset=utf-8 57.5814ms
+2021-12-03 14:50:58.032 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:17799/api/temporal/ - -
+2021-12-03 14:50:58.036 -06:00 [INF] Executing endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:50:58.042 -06:00 [INF] Route matched with {action = "GetAllTemporal", controller = "Temporal"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllTemporal() on controller Proyecto.Controllers.TemporalController (Proyecto).
+2021-12-03 14:50:58.047 -06:00 [INF]  - Getting Temporal list
+2021-12-03 14:50:58.051 -06:00 [INF] Fetching information for Temporal from 0 to 100
+2021-12-03 14:50:58.056 -06:00 [INF] Entity Framework Core 5.0.11 initialized 'proyectoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.26-mysql 
+2021-12-03 14:50:58.103 -06:00 [INF] Executed DbCommand (23ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`IdTem`, `t`.`IdCompra`, `t`.`IdLibro`, `t`.`Cantidad`, `t`.`PrecioTotal`, `t`.`Estado`
+FROM `temporal` AS `t`
+LIMIT @__p_1 OFFSET @__p_0
+2021-12-03 14:50:58.107 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType40`6[[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.SByte, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Proyecto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-12-03 14:50:58.112 -06:00 [INF] Executed action Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto) in 64.9713ms
+2021-12-03 14:50:58.115 -06:00 [INF] Executed endpoint 'Proyecto.Controllers.TemporalController.GetAllTemporal (Proyecto)'
+2021-12-03 14:50:58.120 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:17799/api/temporal/ - - - 200 - application/json;+charset=utf-8 88.7034ms

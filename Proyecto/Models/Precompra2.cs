@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace Proyecto.Models
 {
-    public partial class Temporal
+    public partial class Precompra2
     {
-        public int IdTem { get; set; }
+        public int IdPre { get; set; }
         public int IdCompra { get; set; }
         public int IdLibro { get; set; }
         public int Cantidad { get; set; }
-        public double PrecioTotal { get; set; }
+        public int PrecioTotal { get; set; }
         public sbyte? Estado { get; set; }
 
         public virtual Compra IdCompraNavigation { get; set; }
