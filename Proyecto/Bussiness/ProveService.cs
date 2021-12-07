@@ -25,8 +25,9 @@ namespace Proyecto.Bussiness
             {
                 _looger.LogInformation($"Fetching information for Autor from {index} to {take}");
 
-                return _context.Proveedors.Skip(index).Take(take).Select(e => new {
-                    IdEditorial = e.IdEditorial,
+                return _context.Verproveedors.Skip(index).Take(take).Select(e => new {
+                    IdProv = e.IdProv,
+                    Editorial = e.Editorial,
                     Nombre = e.Nombre,
                     Telefono = e.Telefono,
                     Direccion = e.Direccion,
@@ -40,12 +41,12 @@ namespace Proyecto.Bussiness
             }
         }
 
-        public Proveedor GetProveedor(int IdProv)
+        public Verproveedor GetProveedor(int IdProv)
         {
             try
             {
                 _looger.LogInformation($"Getting information for Autor with number {IdProv}");
-                return _context.Proveedors.Where(e => e.IdProv == IdProv).FirstOrDefault();
+                return _context.Verproveedors.Where(e => e.IdProv == IdProv).FirstOrDefault();
             }
             catch (Exception ex)
             {

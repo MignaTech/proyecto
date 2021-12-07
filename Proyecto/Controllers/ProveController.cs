@@ -59,7 +59,7 @@ namespace Proyecto.Controllers
                     return Ok(
                         new
                         {
-                            IdEditorial = prov.IdEditorial,
+                            Editorial = prov.Editorial,
                             Nombre = prov.Nombre,
                             Telefono = prov.Telefono,
                             Direccion = prov.Direccion,
