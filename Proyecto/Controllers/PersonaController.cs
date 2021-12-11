@@ -65,8 +65,7 @@ namespace Proyecto.Controllers
                             Telefono = persona.Telefono,
                             Correo = persona.Correo,
                             Usuario = persona.Usuario,
-                            Password = persona.Password,
-                            IdNivel = persona.IdNivel,
+                            IdNivel = persona.Nivel,
                             Estado = persona.Estado
                         }
                     );

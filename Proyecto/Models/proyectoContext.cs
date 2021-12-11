@@ -26,10 +26,8 @@ namespace Proyecto.Models
         public virtual DbSet<NivelUser> NivelUsers { get; set; }
         public virtual DbSet<Persona> Personas { get; set; }
         public virtual DbSet<Precompra> Precompras { get; set; }
-        public virtual DbSet<Precompra2> Precompra2s { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<Temporal> Temporals { get; set; }
-        public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Verentradum> Verentrada { get; set; }
         public virtual DbSet<Verlibro> Verlibros { get; set; }
         public virtual DbSet<Verpersona> Verpersonas { get; set; }
@@ -41,7 +39,7 @@ namespace Proyecto.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=localhost;port=3306;user=root;database=proyecto", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.26-mysql"));
+                optionsBuilder.UseMySql("server=localhost;port=3306;user=root;database=proyecto2", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.26-mysql"));
             }
         }
 
@@ -138,10 +136,6 @@ namespace Proyecto.Models
 
                 entity.Property(e => e.Costo).HasPrecision(9, 2);
 
-                entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
-
-                entity.Property(e => e.FechaPublicacion).HasColumnType("date");
-
                 entity.Property(e => e.Precio)
                     .HasPrecision(9, 2)
                     .HasComputedColumnSql("`Costo` * 1.16", true);
@@ -149,8 +143,6 @@ namespace Proyecto.Models
                 entity.Property(e => e.Titulo)
                     .IsRequired()
                     .HasMaxLength(100);
-
-                entity.Property(e => e.Ubicacion).HasMaxLength(50);
 
                 entity.HasOne(d => d.IdAutorNavigation)
                     .WithMany(p => p.Libros)
@@ -249,32 +241,6 @@ namespace Proyecto.Models
                     .HasConstraintName("precompra_libro");
             });
 
-            modelBuilder.Entity<Precompra2>(entity =>
-            {
-                entity.HasKey(e => e.IdPre)
-                    .HasName("PRIMARY");
-
-                entity.ToTable("precompra2");
-
-                entity.HasIndex(e => e.IdCompra, "precompra_compra");
-
-                entity.HasIndex(e => e.IdLibro, "precompra_libro");
-
-                entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
-
-                entity.HasOne(d => d.IdCompraNavigation)
-                    .WithMany(p => p.Precompra2s)
-                    .HasForeignKey(d => d.IdCompra)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("precompra2_ibfk_1");
-
-                entity.HasOne(d => d.IdLibroNavigation)
-                    .WithMany(p => p.Precompra2s)
-                    .HasForeignKey(d => d.IdLibro)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("precompra2_ibfk_2");
-            });
-
             modelBuilder.Entity<Proveedor>(entity =>
             {
                 entity.HasKey(e => e.IdProv)
@@ -332,43 +298,6 @@ namespace Proyecto.Models
                     .HasConstraintName("temporal_libro");
             });
 
-            modelBuilder.Entity<Usuario>(entity =>
-            {
-                entity.ToTable("usuarios");
-
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.ApellidoMaterno)
-                    .IsRequired()
-                    .HasMaxLength(20)
-                    .HasColumnName("apellido_materno");
-
-                entity.Property(e => e.ApellidoPaterno)
-                    .IsRequired()
-                    .HasMaxLength(20)
-                    .HasColumnName("apellido_paterno");
-
-                entity.Property(e => e.Correo)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .HasColumnName("correo");
-
-                entity.Property(e => e.Nombre)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .HasColumnName("nombre");
-
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .HasColumnName("password");
-
-                entity.Property(e => e.Username)
-                    .IsRequired()
-                    .HasMaxLength(20)
-                    .HasColumnName("username");
-            });
-
             modelBuilder.Entity<Verentradum>(entity =>
             {
                 entity.HasNoKey();
@@ -402,20 +331,11 @@ namespace Proyecto.Models
                     .IsRequired()
                     .HasMaxLength(50);
 
-                entity.Property(e => e.Estado)
-                    .IsRequired()
-                    .HasMaxLength(8)
-                    .HasDefaultValueSql("''");
-
-                entity.Property(e => e.FechaPublicacion).HasColumnType("date");
-
                 entity.Property(e => e.Precio).HasPrecision(9, 2);
 
                 entity.Property(e => e.Titulo)
                     .IsRequired()
                     .HasMaxLength(100);
-
-                entity.Property(e => e.Ubicacion).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Verpersona>(entity =>
@@ -458,7 +378,10 @@ namespace Proyecto.Models
 
                 entity.ToView("verprecompra");
 
-                entity.Property(e => e.Estado).HasDefaultValueSql("'1'");
+                entity.Property(e => e.Estado)
+                    .IsRequired()
+                    .HasMaxLength(8)
+                    .HasDefaultValueSql("''");
 
                 entity.Property(e => e.PrecioUnitario).HasPrecision(9, 2);
 

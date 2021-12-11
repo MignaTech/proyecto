@@ -25,10 +25,11 @@ namespace Proyecto.Bussiness
             {
                 _looger.LogInformation($"Fetching information for Precompra from {index} to {take}");
 
-                return _context.Precompras.Skip(index).Take(take).Select(e => new {
+                return _context.Verprecompras.Skip(index).Take(take).Select(e => new {
                     IdPre = e.IdPre,
-                    IdCompra = e.IdCompra,
-                    IdLibro = e.IdLibro,
+                    IdCompra =e.IdCompra,
+                    Titulo = e.Titulo,
+                    PrecioUnitario = e.PrecioUnitario,
                     Cantidad = e.Cantidad,
                     PrecioTotal = e.PrecioTotal,
                     Estado = e.Estado
@@ -41,12 +42,12 @@ namespace Proyecto.Bussiness
             }
         }
 
-        public Precompra GetPrecompra(int IdPre)
+        public Verprecompra GetPrecompra(int IdPre)
         {
             try
             {
                 _looger.LogInformation($"Getting information for Precompra with number {IdPre}");
-                return _context.Precompras.Where(e => e.IdPre == IdPre).FirstOrDefault();
+                return _context.Verprecompras.Where(e => e.IdPre == IdPre).FirstOrDefault();
             }
             catch (Exception ex)
             {

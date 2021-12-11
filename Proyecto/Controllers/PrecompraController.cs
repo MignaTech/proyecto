@@ -61,7 +61,8 @@ namespace Proyecto.Controllers
                         new
                         {
                             IdCompra = precompra.IdCompra,
-                            IdLibro = precompra.IdLibro,
+                            Titulo = precompra.Titulo,
+                            PrecioUnitario = precompra.PrecioUnitario,
                             Cantidad = precompra.Cantidad,
                             PrecioTotal = precompra.PrecioTotal,                      
                             Estado = precompra.Estado

@@ -10,21 +10,16 @@ namespace Proyecto.Models
         public Libro()
         {
             Entradaproducs = new HashSet<Entradaproduc>();
-            Precompra2s = new HashSet<Precompra2>();
             Precompras = new HashSet<Precompra>();
             Temporals = new HashSet<Temporal>();
         }
 
         public int IdLibro { get; set; }
         public string Titulo { get; set; }
-        public byte[] Imagen { get; set; }
         public int IdAutor { get; set; }
         public int IdCategoria { get; set; }
         public int IdEditorial { get; set; }
-        public string Ubicacion { get; set; }
         public int Ejemplares { get; set; }
-        public sbyte? Estado { get; set; }
-        public DateTime? FechaPublicacion { get; set; }
         public decimal Costo { get; set; }
         public decimal? Precio { get; set; }
 
@@ -32,7 +27,6 @@ namespace Proyecto.Models
         public virtual Categorium IdCategoriaNavigation { get; set; }
         public virtual Editorial IdEditorialNavigation { get; set; }
         public virtual ICollection<Entradaproduc> Entradaproducs { get; set; }
-        public virtual ICollection<Precompra2> Precompra2s { get; set; }
         public virtual ICollection<Precompra> Precompras { get; set; }
         public virtual ICollection<Temporal> Temporals { get; set; }
     }

@@ -103,11 +103,9 @@ namespace Proyecto
             services.AddScoped<INivelService, NivelService>();
             services.AddScoped<IPersonaService, PersonaService>();
             services.AddScoped<IProveService, ProveService>();
-            
             services.AddScoped<ICompraService, CompraService>();
             services.AddScoped<IPrecompraService, PrecompraService>();
             services.AddScoped<ITemporalService, TemporalService>();
-            services.AddScoped<IUsuarioService, UsuarioService>();
             #endregion
         }
 

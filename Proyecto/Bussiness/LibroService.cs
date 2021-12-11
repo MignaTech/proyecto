@@ -72,14 +72,10 @@ namespace Proyecto.Bussiness
                 if (saved != null)
                 {
                     saved.Titulo = !saved.Titulo.Equals(libros.Titulo) ? libros.Titulo : saved.Titulo;
-                    saved.Imagen = !saved.Imagen.Equals(libros.Imagen) ? libros.Imagen : saved.Imagen;
                     saved.IdAutor = !saved.IdAutor.Equals(libros.IdAutor) ? libros.IdAutor : saved.IdAutor;
                     saved.IdCategoria = !saved.IdCategoria.Equals(libros.IdCategoria) ? libros.IdCategoria : saved.IdCategoria;
                     saved.IdEditorial = !saved.IdEditorial.Equals(libros.IdEditorial) ? libros.IdEditorial : saved.IdEditorial;
-                    saved.Ubicacion = !saved.Ubicacion.Equals(libros.Ubicacion) ? libros.Ubicacion : saved.Ubicacion;
                     saved.Ejemplares = !saved.Ejemplares.Equals(libros.Ejemplares) ? libros.Ejemplares : saved.Ejemplares;
-                    saved.Estado = !saved.Estado.Equals(libros.Estado) ? libros.Estado : saved.Estado;
-                    saved.FechaPublicacion = !saved.FechaPublicacion.Equals(libros.FechaPublicacion) ? libros.FechaPublicacion : saved.FechaPublicacion;
                     saved.Costo = !saved.Costo.Equals(libros.Costo) ? libros.Costo : saved.Costo;
                     saved.Precio = !saved.Precio.Equals(libros.Precio) ? libros.Precio : saved.Precio;
                     _context.SaveChanges();

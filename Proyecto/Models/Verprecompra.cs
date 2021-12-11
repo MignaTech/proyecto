@@ -13,6 +13,6 @@ namespace Proyecto.Models
         public decimal? PrecioUnitario { get; set; }
         public int Cantidad { get; set; }
         public int PrecioTotal { get; set; }
-        public sbyte? Estado { get; set; }
+        public string Estado { get; set; }
     }
 }

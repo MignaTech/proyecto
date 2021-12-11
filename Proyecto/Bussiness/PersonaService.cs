@@ -25,7 +25,7 @@ namespace Proyecto.Bussiness
             {
                 _looger.LogInformation($"Fetching information for Autor from {index} to {take}");
 
-                return _context.Personas.Skip(index).Take(take).Select(e => new {
+                return _context.Verpersonas.Skip(index).Take(take).Select(e => new {
                     IdPersona = e.IdPersona,
                     Nombre = e.Nombre,
                     Apellido = e.Apellido,
@@ -33,8 +33,7 @@ namespace Proyecto.Bussiness
                     Telefono = e.Telefono,
                     Correo = e.Correo,
                     Usuario = e.Usuario,
-                    Password = e.Password,
-                    IdNivel = e.IdNivel,
+                    IdNivel = e.Nivel,
                     Estado = e.Estado
                 });
             }
@@ -45,12 +44,12 @@ namespace Proyecto.Bussiness
             }
         }
 
-        public Persona GetPersona(int IdPersona)
+        public Verpersona GetPersona(int IdPersona)
         {
             try
             {
                 _looger.LogInformation($"Getting information for Autor with number {IdPersona}");
-                return _context.Personas.Where(e => e.IdPersona == IdPersona).FirstOrDefault();
+                return _context.Verpersonas.Where(e => e.IdPersona == IdPersona).FirstOrDefault();
             }
             catch (Exception ex)
             {
