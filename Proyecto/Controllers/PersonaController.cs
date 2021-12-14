@@ -59,13 +59,16 @@ namespace Proyecto.Controllers
                     return Ok(
                         new
                         {
+                            IdPersona = persona.IdPersona,
                             Nombre = persona.Nombre,
                             Apellido = persona.Apellido,
                             Direccion = persona.Direccion,
                             Telefono = persona.Telefono,
                             Correo = persona.Correo,
                             Usuario = persona.Usuario,
-                            IdNivel = persona.Nivel,
+                            Password = persona.Password,
+                            IdNivel = persona.IdNivel,
+                            Nivel = persona.Nivel,
                             Estado = persona.Estado
                         }
                     );

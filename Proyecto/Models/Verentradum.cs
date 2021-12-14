@@ -9,6 +9,7 @@ namespace Proyecto.Models
     {
         public int IdProd { get; set; }
         public DateTime Fecha { get; set; }
+        public int IdLibro { get; set; }
         public string Titulo { get; set; }
         public int Cantidad { get; set; }
     }

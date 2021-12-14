@@ -8,6 +8,7 @@ namespace Proyecto.Models
     public partial class Verproveedor
     {
         public int IdProv { get; set; }
+        public int IdEditorial { get; set; }
         public string Editorial { get; set; }
         public string Nombre { get; set; }
         public string Telefono { get; set; }

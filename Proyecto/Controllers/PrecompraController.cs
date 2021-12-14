@@ -60,7 +60,9 @@ namespace Proyecto.Controllers
                     return Ok(
                         new
                         {
+                            IdPre = precompra.IdPre,
                             IdCompra = precompra.IdCompra,
+                            IdLibro = precompra.IdLibro,
                             Titulo = precompra.Titulo,
                             PrecioUnitario = precompra.PrecioUnitario,
                             Cantidad = precompra.Cantidad,

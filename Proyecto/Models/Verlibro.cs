@@ -9,8 +9,11 @@ namespace Proyecto.Models
     {
         public int IdLibro { get; set; }
         public string Titulo { get; set; }
+        public int IdAutor { get; set; }
         public string Autor { get; set; }
+        public int IdCategoria { get; set; }
         public string Categoria { get; set; }
+        public int IdEditorial { get; set; }
         public string Editorial { get; set; }
         public int Ejemplares { get; set; }
         public decimal Costo { get; set; }

@@ -14,6 +14,8 @@ namespace Proyecto.Models
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public string Usuario { get; set; }
+        public string Password { get; set; }
+        public int IdNivel { get; set; }
         public string Nivel { get; set; }
         public string Estado { get; set; }
     }

@@ -61,7 +61,9 @@ namespace Proyecto.Controllers
                     return Ok(
                         new
                         {
+                            IdProd = producto.IdProd,
                             Fecha = producto.Fecha,
+                            IdLibro = producto.IdLibro,
                             Libro = producto.Titulo,
                             Cantidad = producto.Cantidad
                         }

@@ -365,6 +365,10 @@ namespace Proyecto.Models
                     .IsRequired()
                     .HasMaxLength(50);
 
+                entity.Property(e => e.Password)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
                 entity.Property(e => e.Telefono).HasMaxLength(10);
 
                 entity.Property(e => e.Usuario)

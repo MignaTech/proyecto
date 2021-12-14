@@ -9,6 +9,7 @@ namespace Proyecto.Models
     {
         public int IdPre { get; set; }
         public int IdCompra { get; set; }
+        public int IdLibro { get; set; }
         public string Titulo { get; set; }
         public decimal? PrecioUnitario { get; set; }
         public int Cantidad { get; set; }

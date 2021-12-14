@@ -77,7 +77,6 @@ namespace Proyecto.Bussiness
                     saved.IdEditorial = !saved.IdEditorial.Equals(libros.IdEditorial) ? libros.IdEditorial : saved.IdEditorial;
                     saved.Ejemplares = !saved.Ejemplares.Equals(libros.Ejemplares) ? libros.Ejemplares : saved.Ejemplares;
                     saved.Costo = !saved.Costo.Equals(libros.Costo) ? libros.Costo : saved.Costo;
-                    saved.Precio = !saved.Precio.Equals(libros.Precio) ? libros.Precio : saved.Precio;
                     _context.SaveChanges();
                     return true;
                 }

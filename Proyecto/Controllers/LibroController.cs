@@ -62,8 +62,11 @@ namespace Proyecto.Controllers
                         {
                             IdLibro = libro.IdLibro,
                             Titulo = libro.Titulo,
+                            IdAutor = libro.IdAutor,
                             Autor = libro.Autor,
+                            IdCategoria = libro.IdCategoria,
                             Categoria = libro.Categoria,
+                            IdEditorial = libro.IdEditorial,
                             Editorial = libro.Editorial,
                             Ejemplares = libro.Ejemplares,
                             Costo = libro.Costo,
