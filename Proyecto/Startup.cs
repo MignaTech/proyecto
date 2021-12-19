@@ -106,7 +106,9 @@ namespace Proyecto
             services.AddScoped<ICompraService, CompraService>();
             services.AddScoped<IPrecompraService, PrecompraService>();
             services.AddScoped<ITemporalService, TemporalService>();
+            services.AddScoped<IUserService, UserService>();
             #endregion
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
