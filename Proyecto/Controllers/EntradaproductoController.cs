@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Proyecto.Controllers
 {
+    [Authorize]
     public class EntradaproductoController : ControllerBase
     {
 

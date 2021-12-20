@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Proyecto.Controllers
 {
+    [Authorize]
     public class PrecompraController : ControllerBase
     {
         #region add Interfaz and ILogger
@@ -35,6 +36,26 @@ namespace Proyecto.Controllers
             try
             {
                 var precompra = _service.GetAllPrecompra(0, 100);
+                return Ok(precompra);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"{userName} - Error during query to get autores information");
+                throw;
+            }
+        }
+
+        [HttpGet("api/confirma/{IdCompra}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Verprecompra))]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult Confirmar(int IdCompra)
+        {
+            var claimsIdentity = this.User.Identity as ClaimsIdentity;
+            var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
+            _logger.LogInformation($"{userName} - Calling method GetPrecompra with param {IdCompra}", null);
+            try
+            {
+                var precompra = _service.Confirmar(IdCompra);
                 return Ok(precompra);
             }
             catch (Exception ex)
@@ -76,6 +97,36 @@ namespace Proyecto.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"{userName} - Error during query to get precompra information", IdPre);
+                throw;
+            }
+        }
+
+        [HttpGet("api/total/{IdCompra}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Total))]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult Total(int IdCompra)
+        {
+            var claimsIdentity = this.User.Identity as ClaimsIdentity;
+            var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
+            _logger.LogInformation($"{userName} - Calling method GetPrecompra with param {IdCompra}", null);
+            try
+            {
+                var total = _service.Total(IdCompra);
+                if (total != null)
+                {
+                    return Ok(
+                        new
+                        {
+                            total.IdCompra,
+                            total.Total1
+                        }
+                    );
+                }
+                return BadRequest("Precompra Id was not found.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"{userName} - Error during query to get precompra information", IdCompra);
                 throw;
             }
         }

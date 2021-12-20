@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 namespace Proyecto.Controllers
 {
+    [Authorize]
     public class ComprasController : ControllerBase
     {
 

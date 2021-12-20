@@ -11,5 +11,7 @@ namespace Proyecto.Services
         bool SavePrecompra(Precompra IdPre);
         bool UpdatePrecompra(int IdPre, Precompra precompra);
         bool DeletePrecompra(int IdPre);
+        IEnumerable Confirmar(int IdCompra);
+        Total Total(int IdCompra);
     }
 }

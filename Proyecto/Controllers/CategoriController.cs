@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Proyecto.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class CategoriController : ControllerBase
     {
         #region add Interfaz and ILogger

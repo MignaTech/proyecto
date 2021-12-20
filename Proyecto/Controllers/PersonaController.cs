@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Proyecto.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class PersonaController : ControllerBase
     {
         #region add Interfaz and ILogger
@@ -78,6 +78,35 @@ namespace Proyecto.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"{userName} - Error during query to get autor information", IdPersona);
+                throw;
+            }
+        }
+        [HttpGet("api/empleado/{usuario}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Verpersona))]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult Usuario(string usuario)
+        {
+            var claimsIdentity = this.User.Identity as ClaimsIdentity;
+            var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
+            _logger.LogInformation($"{userName} - Calling method GetEmployee with param {usuario}", null);
+            try
+            {
+                var persona = _service.Usuario(usuario);
+                if (persona != null)
+                {
+                    return Ok(
+                        new
+                        {
+                            IdPersona = persona.IdPersona,
+                            Usuario = persona.Usuario,
+                        }
+                    );
+                }
+                return BadRequest("Autor Id was not found.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during query to get autor information", usuario);
                 throw;
             }
         }

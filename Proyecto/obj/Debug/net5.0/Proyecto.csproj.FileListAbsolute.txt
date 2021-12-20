@@ -57,3 +57,4 @@ D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto\bin\Debug\net5.0\Serilog.Sinks.Deb
 D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto\bin\Debug\net5.0\Serilog.Sinks.File.dll
 D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\1 SEMENTRE 5\Sistema Web\Proyecto\Proyecto\bin\Debug\net5.0\.filenesting.json

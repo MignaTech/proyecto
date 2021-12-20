@@ -117,5 +117,34 @@ namespace Proyecto.Bussiness
                 throw;
             }
         }
+
+        public Total Total(int IdCompra)
+        {
+            try
+            {
+                _looger.LogInformation($"Getting information for Total with number {IdCompra}");
+                return _context.Totals.Where(e => e.IdCompra == IdCompra).FirstOrDefault();
+                
+            }
+            catch (Exception ex)
+            {
+                _looger.LogError(ex, $"An error ocurred in method {nameof(GetPrecompra)}", new { IdCompra });
+                throw;
+            }
+        }
+
+        public IEnumerable Confirmar(int IdCompra)
+        {
+            try
+            {
+                _looger.LogInformation($"Getting information for Precompra with number {IdCompra}");
+                return _context.Verprecompras.Where(e => e.IdCompra == IdCompra);
+            }
+            catch (Exception ex)
+            {
+                _looger.LogError(ex, $"An error ocurred in method {nameof(Confirmar)}", new { IdCompra });
+                throw;
+            }
+        }
     }
 }

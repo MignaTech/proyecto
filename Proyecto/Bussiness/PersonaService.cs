@@ -57,6 +57,19 @@ namespace Proyecto.Bussiness
                 throw;
             }
         }
+        public Verpersona Usuario(string usuario)
+        {
+            try
+            {
+                _looger.LogInformation($"Getting information for Autor with number {usuario}");
+                return _context.Verpersonas.Where(e => e.Usuario == usuario).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _looger.LogError(ex, $"An error ocurred in method {nameof(Usuario)}", new { usuario });
+                throw;
+            }
+        }
 
         public bool SavePersona(Persona persona)
         {

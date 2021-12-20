@@ -28,6 +28,7 @@ namespace Proyecto.Models
         public virtual DbSet<Precompra> Precompras { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<Temporal> Temporals { get; set; }
+        public virtual DbSet<Total> Totals { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Verentradum> Verentrada { get; set; }
         public virtual DbSet<Verlibro> Verlibros { get; set; }
@@ -297,6 +298,17 @@ namespace Proyecto.Models
                     .HasForeignKey(d => d.IdLibro)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("temporal_libro");
+            });
+
+            modelBuilder.Entity<Total>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("total");
+
+                entity.Property(e => e.Total1)
+                    .HasPrecision(32)
+                    .HasColumnName("Total");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
