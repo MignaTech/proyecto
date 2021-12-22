@@ -117,6 +117,7 @@ namespace Proyecto.Controllers
                 throw;
             }
         }
+        
         [HttpDelete("api/categorias/{IdCategoria}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

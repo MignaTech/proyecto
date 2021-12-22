@@ -127,6 +127,31 @@ namespace Proyecto.Controllers
                 throw;
             }
         }
+
+        [HttpPut("api/libro/stock/{IdLibro}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult Stock([FromBody] Libro libros, int IdLibro)
+        {
+            var claimsIdentity = this.User.Identity as ClaimsIdentity;
+            var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
+            try
+            {
+                _logger.LogInformation($"{userName} - Updating libros number {IdLibro}");
+                var updated = _service.Stock(IdLibro, libros);
+                if (updated)
+                    return Ok();
+                else
+                    return BadRequest("Libro Id not found.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"{userName} - Error during Libro update {libros.IdLibro}");
+                throw;
+            }
+        }
+
         [HttpDelete("api/libro/{IdLibro}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

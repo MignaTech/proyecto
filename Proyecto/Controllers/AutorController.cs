@@ -117,6 +117,7 @@ namespace Proyecto.Controllers
                 throw;
             }
         }
+        
         [HttpDelete("api/autores/{IdAutor}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

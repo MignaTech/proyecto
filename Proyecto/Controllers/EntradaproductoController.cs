@@ -125,7 +125,7 @@ namespace Proyecto.Controllers
                 throw;
             }
         }
-
+        
         [HttpDelete("api/entradaproductos/{IdProd}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

@@ -32,7 +32,8 @@ namespace Proyecto.Bussiness
             {
                 Subject = new ClaimsIdentity(
                     new Claim[] {
-                        new Claim (ClaimTypes.Name, user.Usuario1)
+                        new Claim (ClaimTypes.Name, user.Usuario1),
+                        new Claim ("dns", user.IdUser.ToString())
                     }
                 ),
                 Expires = DateTime.Now.AddHours(1),

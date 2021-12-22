@@ -125,7 +125,7 @@ namespace Proyecto.Controllers
             }
         }
 
-        //[Authorize]
+        
         [HttpDelete("api/temporal/{IdTem}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

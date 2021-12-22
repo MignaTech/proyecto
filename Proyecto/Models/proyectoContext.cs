@@ -20,6 +20,7 @@ namespace Proyecto.Models
         public virtual DbSet<Autor> Autors { get; set; }
         public virtual DbSet<Categorium> Categoria { get; set; }
         public virtual DbSet<Compra> Compras { get; set; }
+        public virtual DbSet<Comprar> Comprars { get; set; }
         public virtual DbSet<Editorial> Editorials { get; set; }
         public virtual DbSet<Entradaproduc> Entradaproducs { get; set; }
         public virtual DbSet<Libro> Libros { get; set; }
@@ -85,7 +86,35 @@ namespace Proyecto.Models
 
                 entity.ToTable("compra");
 
-                entity.Property(e => e.Fecha).HasColumnType("date");
+                entity.HasIndex(e => e.IdEmpleado, "IdEmpleado");
+
+                entity.Property(e => e.Fecha)
+                    .HasColumnType("date")
+                    .HasDefaultValueSql("'2021-12-20'");
+
+                entity.HasOne(d => d.IdEmpleadoNavigation)
+                    .WithMany(p => p.Compras)
+                    .HasForeignKey(d => d.IdEmpleado)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("compra_ibfk_1");
+            });
+
+            modelBuilder.Entity<Comprar>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("comprar");
+
+                entity.Property(e => e.Estado)
+                    .IsRequired()
+                    .HasMaxLength(8)
+                    .HasDefaultValueSql("''");
+
+                entity.Property(e => e.PrecioUnitario).HasPrecision(9, 2);
+
+                entity.Property(e => e.Titulo)
+                    .IsRequired()
+                    .HasMaxLength(100);
             });
 
             modelBuilder.Entity<Editorial>(entity =>

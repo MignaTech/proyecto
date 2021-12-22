@@ -19,7 +19,7 @@ namespace Proyecto.Bussiness
         }
         #endregion
 
-        public IEnumerable GetAllAutor(int index=0, int take=50)
+		public IEnumerable GetAllAutor(int index=0, int take=50)
         {
             try
             {

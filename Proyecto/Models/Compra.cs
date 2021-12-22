@@ -18,6 +18,7 @@ namespace Proyecto.Models
         public int IdEmpleado { get; set; }
         public double TotalCompra { get; set; }
 
+        public virtual Persona IdEmpleadoNavigation { get; set; }
         public virtual ICollection<Precompra> Precompras { get; set; }
         public virtual ICollection<Temporal> Temporals { get; set; }
     }

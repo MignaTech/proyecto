@@ -177,8 +177,7 @@ namespace Proyecto.Controllers
                 throw;
             }
         }
-
-        //[Authorize]
+        
         [HttpDelete("api/precompra/{IdPre}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

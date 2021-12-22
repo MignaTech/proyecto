@@ -88,6 +88,26 @@ namespace Proyecto.Bussiness
                 throw;
             }
         }
+        public bool Stock(int IdLibro, Libro libros)
+        {
+            try
+            {
+                _looger.LogInformation($"Update record for the Autor number { IdLibro }");
+                var saved = _context.Libros.Where(e => e.IdLibro == IdLibro).FirstOrDefault();
+                if (saved != null)
+                {
+                    saved.Ejemplares = saved.Ejemplares - libros.Ejemplares;
+                    _context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                _looger.LogError(ex, $"An error ocurred in method {nameof(Stock)}", new { IdLibro, libros });
+                throw;
+            }
+        }
 
         public bool DeleteLibro(int IdLibro)
         {

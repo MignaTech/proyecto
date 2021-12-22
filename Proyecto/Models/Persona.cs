@@ -7,6 +7,11 @@ namespace Proyecto.Models
 {
     public partial class Persona
     {
+        public Persona()
+        {
+            Compras = new HashSet<Compra>();
+        }
+
         public int IdPersona { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -19,5 +24,6 @@ namespace Proyecto.Models
         public sbyte? Estado { get; set; }
 
         public virtual NivelUser IdNivelNavigation { get; set; }
+        public virtual ICollection<Compra> Compras { get; set; }
     }
 }

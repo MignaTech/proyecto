@@ -122,6 +122,7 @@ namespace Proyecto.Controllers
                 throw;
             }
         }
+        
         [HttpDelete("api/prove/{IdProv}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

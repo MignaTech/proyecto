@@ -155,6 +155,7 @@ namespace Proyecto.Controllers
                 throw;
             }
         }
+        
         [HttpDelete("api/persona/{IdPersona}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
